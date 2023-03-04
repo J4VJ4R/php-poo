@@ -114,15 +114,57 @@ class People{
 
 }
 
+
+/**
+ * Class to create an informaticMan object with inheritance from People
+ */
 class InformaticMan extends People{
     public $action;
     public $programming;
     public $doOfimatic;
 
+
+    /**
+     * Function startAction when it shows some text
+     *
+     * @return $action
+     */
     public function startAction(){
         global $action;
         $this->action = "Fixing computer";
 
         return $action;
     } 
+
+    /**
+     * Function languages where show cuantity languages know
+     *
+     * @return $programming
+     */
+    public function languages(){
+        global $programming;
+        $this->programming = "PHP, PYTHON, JS";
+
+        return $programming;
+    }
+}
+
+/**
+ * Class Designer: to show new designer object with inheritance form People and InformaticMan
+ * 
+ */
+class Designer extends InformaticMan{
+    public $projectToDesign;
+
+    /**
+     * Function startPoject to show action when start a project
+     *
+     * @return $projectTodesign
+     */
+    public function starProject(){
+        global $projectToDesign;
+        $this->projectToDesign = "Startting proyect to design";
+
+        return $projectToDesign;
+    }
 }
