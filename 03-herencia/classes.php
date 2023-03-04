@@ -1,5 +1,9 @@
 <?php
 
+
+/**
+ * Class People is the main class this program, onlty to learning about herency
+ */
 class People{
     public $name;
     public $age;
@@ -108,4 +112,17 @@ class People{
     }
 
 
+}
+
+class InformaticMan extends People{
+    public $action;
+    public $programming;
+    public $doOfimatic;
+
+    public function startAction(){
+        global $action;
+        $this->action = "Fixing computer";
+
+        return $action;
+    } 
 }
