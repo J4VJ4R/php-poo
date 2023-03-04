@@ -40,6 +40,20 @@ class Coche{
     public function getModelo(){
         return $this->modelo;
     }
+
+    public function showInformation(coche $myObject){
+        if(is_object($myObject)){
+            $information = "<h1>The Cars information</h1><br>";
+            $information .= "<h3>Placa: ".$myObject->placa."</h3>";
+            $information .= "<h3>Color: ".$myObject->color."</h3>";
+            $information .= "<h3>Velocidad: ".$myObject->velocidad."</h3>";
+            $information .= "<h3>Modelo: ".$myObject->modelo."</h3>";
+
+            return $information;
+        }else{
+            echo "The data is ".$myObject;
+        }
+    }
 }
 
 

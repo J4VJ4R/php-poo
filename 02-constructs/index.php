@@ -3,7 +3,6 @@
 require_once ('coche.php');
 
 $coche = new Coche("abc-234", "azul", 300, "Mazda");
+$coche1 = new Coche("nno-112", "Pink", 250, "Ferrari");
 
-$coche->setColor("Morado");
-var_dump($coche->getColor());
-var_dump($coche);
+echo $coche->showInformation($coche1);
