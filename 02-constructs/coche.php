@@ -2,8 +2,8 @@
 
 class Coche{
     public $placa;
-    public $color;
-    public $velocidad;
+    private $color;
+    protected $velocidad;
     public $modelo;
 
     public function __construct($placa, $color, $velocidad, $modelo){
