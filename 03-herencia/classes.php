@@ -125,6 +125,9 @@ class InformaticMan extends People{
     public $lenguajes;
     public $experience;
 
+    /**
+     * __construct with varibles predefined to start the class
+     */
     public function __construct(){
         $this->lenguajes = "HTML, CSS, JS";
         $this->experience = 10;
@@ -161,6 +164,11 @@ class InformaticMan extends People{
  */
 class Designer extends InformaticMan{
     public $projectToDesign;
+
+    public function __construct()
+    {
+        $this->projectToDesign = "Menus of restaurantes";
+    }
 
     /**
      * Function startPoject to show action when start a project
