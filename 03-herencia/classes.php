@@ -122,7 +122,13 @@ class InformaticMan extends People{
     public $action;
     public $programming;
     public $doOfimatic;
+    public $lenguajes;
+    public $experience;
 
+    public function __construct(){
+        $this->lenguajes = "HTML, CSS, JS";
+        $this->experience = 10;
+    }
 
     /**
      * Function startAction when it shows some text
