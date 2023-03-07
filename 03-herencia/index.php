@@ -8,10 +8,7 @@ var_dump($people1);
 
 //Creatting a new informaticMan with inheritance from People
 $informaticMan = new InformaticMan();
-$informaticMan->startAction();
-$informaticMan->setName("Camila");
-$informaticMan->setEight(25);
-$informaticMan->languages();
+
 var_dump($informaticMan);
 
 //Creatting a new object named designer1 with inheritance from InformaticMan
