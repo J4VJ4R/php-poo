@@ -1,16 +1,12 @@
 <?php
+// Posibility to inerhitance different atributes
 
-
-/**
- * Class People is the main class this program, onlty to learning about herency
- */
-class People{
+class People
+{
     public $name;
+    public $lastname;
     public $age;
-    public $eight;
-    public $genre;
-
-
+    public $weith;
 
     /**
      * Get the value of name
@@ -28,6 +24,26 @@ class People{
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of lastname
+     */ 
+    public function getLastname()
+    {
+        return $this->lastname;
+    }
+
+    /**
+     * Set the value of lastname
+     *
+     * @return  self
+     */ 
+    public function setLastname($lastname)
+    {
+        $this->lastname = $lastname;
 
         return $this;
     }
@@ -53,132 +69,30 @@ class People{
     }
 
     /**
-     * Get the value of eight
+     * Get the value of weith
      */ 
-    public function getEight()
+    public function getWeith()
     {
-        return $this->eight;
+        return $this->weith;
     }
 
     /**
-     * Set the value of eight
+     * Set the value of weith
      *
      * @return  self
      */ 
-    public function setEight($eight)
+    public function setWeith($weith)
     {
-        $this->eight = $eight;
+        $this->weith = $weith;
 
         return $this;
     }
 
-    /**
-     * Get the value of genre
-     */ 
-    public function getGenre()
-    {
-        return $this->genre;
+    public function isTalking(){
+        return "is talking";
     }
 
-    /**
-     * Set the value of genre
-     *
-     * @return  self
-     */ 
-    public function setGenre($genre)
-    {
-        $this->genre = $genre;
-
-        return $this;
-    }
-
-    /**
-     * Function to show the method talk with return
-     *
-     * @return some text
-     */
-    public function talk(){
-        return "Is tolking";
-    }
-
-
-    /**
-     * Function walk to show some text
-     *
-     * @return some text
-     */
-    public function walk(){
-        return "Is walking";
-    }
-
-
-}
-
-
-/**
- * Class to create an informaticMan object with inheritance from People
- */
-class InformaticMan extends People{
-    public $action;
-    public $programming;
-    public $doOfimatic;
-    public $lenguajes;
-    public $experience;
-
-    /**
-     * __construct with varibles predefined to start the class
-     */
-    public function __construct(){
-        $this->lenguajes = "HTML, CSS, JS";
-        $this->experience = 10;
-    }
-
-    /**
-     * Function startAction when it shows some text
-     *
-     * @return $action
-     */
-    public function startAction(){
-        global $action;
-        $this->action = "Fixing computer";
-
-        return $action;
-    } 
-
-    /**
-     * Function languages where show cuantity languages know
-     *
-     * @return $programming
-     */
-    public function languages(){
-        global $programming;
-        $this->programming = "PHP, PYTHON, JS";
-
-        return $programming;
-    }
-}
-
-/**
- * Class Designer: to show new designer object with inheritance form People and InformaticMan
- * 
- */
-class Designer extends InformaticMan{
-    public $projectToDesign;
-
-    public function __construct()
-    {
-        $this->projectToDesign = "Menus of restaurantes";
-    }
-
-    /**
-     * Function startPoject to show action when start a project
-     *
-     * @return $projectTodesign
-     */
-    public function starProject(){
-        global $projectToDesign;
-        $this->projectToDesign = "Startting proyect to design";
-
-        return $projectToDesign;
+    public function isWalking(){
+        return "is walking";
     }
 }
