@@ -2,7 +2,7 @@
 
 
 function app_autoload($class){
-    require_once 'classes/'.str_replace('\\', '/', $class).'.php';
+    include 'classes/'.str_replace('\\', '/', $class).'.php';
 }
 
 
