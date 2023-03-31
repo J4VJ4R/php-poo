@@ -1,6 +1,7 @@
 <?php
+namespace MisClases;
 
-class Entradas{
+class Entrada{
     public $titulo;
     public $fecha;
 

@@ -1,12 +1,25 @@
 <?php
 require_once 'autoload.php';
-// require_once './classes/categoria.php';
-// require_once './classes/entrada.php';
-// require_once './classes/usuario.php';
+use MisClases\Usuario;
+use MisClases\Categoria;
+use MisClases\Entrada;
+use PanelAdministrador\Usuario as UsuarioAdmin;
 
-$usuario = new Usuario();
-echo $usuario->nombre."<br>";
-echo $usuario->email;
+class Principal{
+    public $usuario;
+    public $categoria;
+    public $entrada;
 
-$categoria = new Categoria();
-echo "<br>".$categoria->nombre;
+
+    public function __construct()
+    {
+        $this->usuario = new Usuario();
+        $this->categoria = new Categoria();
+        $this->entrada = new Entrada();
+    }
+   
+}
+$usuario = new UsuarioAdmin();
+var_dump($usuario);
+$principal = new Principal();
+var_dump($principal->usuario);
