@@ -57,16 +57,23 @@ class Principal{
 
         return $this;
     }
+
+    // public function informacion(){
+    //     echo __FILE__;
+    // }
     
 }
 // $usuario = new UsuarioAdmin();
 // var_dump($usuario);
+$usuario = new Usuario();
+$usuario->informacion();
 $principal = new Principal();
+// $principal->informacion();
 // var_dump($principal->usuario);
 $metodos = (get_class_methods($principal));
-// Busqueda
-$busqueda = array_search("setEntrada", $metodos);
-var_dump($busqueda);
+// // Busqueda
+// $busqueda = array_search("setEntrada", $metodos);
+// var_dump($busqueda);
 
 //comprobar si existe una clase
 $clase = @class_exists('PanelAdministrador\Usuario2');
